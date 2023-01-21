@@ -1,0 +1,85 @@
+﻿@model IEnumerable<PeymanAkhtari.Models.Project>
+@using System.Globalization
+@inject IViewLocalizer Localizer
+@{
+    var lang1 = CultureInfo.CurrentCulture.Name;
+}
+<div class="container message_box mt-5">
+    <form id="form" class="form_message">
+        <h3 class="shadow">@Localizer["sendmessage"] </h3>
+        <br>
+        <label for="name">@Localizer["username"] :</label>
+        @if (lang1 == "fa")
+        {
+            <input class="input_message" name="email" type="number" id="name" required>
+        }
+        else if (lang1 == "en")
+        {
+            <input class="input_message" name="email" type="email" id="name" required>
+        }
+        <label for="message">@Localizer["usermessage"] :</label>
+        <textarea class="textarea_message" name="message" id="message" cols="30" rows="5" required></textarea><br>
+        <input id="btnsendmessage" class="btn btn-dark px-4" value='@Localizer["btnsend"]' type="button">
+    </form>
+
+
+    <div class="contact_links">
+
+        <span>
+            @Localizer["email"]
+        </span>
+
+        <span>
+            @Localizer["whatsapp"]
+        </span>
+
+
+    </div>
+
+</div>
+<script>
+    $(document).ready(function () {
+
+        var btnsendmessage = document.getElementById('btnsendmessage')
+        btnsendmessage.addEventListener('click', function () {
+            if ($('#form').valid()) {
+                $('#btnsendmessage').prop("disabled",true);
+                $.ajax({
+                    type: 'POST',
+                    url: '/Home/Sendmessage',
+                    data: {
+                        username: $('#name').val(),
+                        message: $('#message').val()
+                    },
+                    success: function (res) {
+                        $('.form_message').append(`
+            <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+            <strong>@Localizer["messagesend1"]</strong><br> @Localizer["messagesend2"]${res}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            `)
+                        $('input[type=number]').val('');
+                        $('input[type=email]').val('');
+                        $('textarea').val('');
+                    },
+                    error: function (er) {
+                        alert(er)
+                    }
+                })
+            }
+
+        })
+        $('#form').validate({
+            errorPlacement: function (label, element) {
+                label.css('color', 'rgb(90, 1, 1)');
+                label.insertAfter(element);
+            },
+            errorElement: 'label',
+            wrapper: 'div'
+        });
+        jQuery.extend(jQuery.validator.messages, {
+            required: '@Localizer["input required"]',
+            email: '@Localizer["email invalid"]'
+        });
+    })
+</script>

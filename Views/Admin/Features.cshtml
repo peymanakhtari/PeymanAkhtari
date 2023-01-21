@@ -1,0 +1,92 @@
+﻿@model IEnumerable<PeymanAkhtari.Models.Feature>
+
+@{
+    ViewData["Title"] = "Features";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h1>Features</h1>
+
+<p>
+    <a asp-route-id="@ViewBag.projectId" asp-action="CreateFeature">Create New</a>
+</p>
+<p>
+    <a  asp-action="Index">back</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.Text1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.img1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.img2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sequence)
+            </th>
+
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody class="featureBody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text2)
+                </td>
+                <td>
+                    @if (item.img1 != null)
+                    {
+                        <img src="~/images/features/@item.img1" />
+                    }
+                </td>
+                <td>@if (item.img2 != null)
+                    {
+                        <img src="~/images/features/@item.img2" />
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sequence)
+                </td>
+                <td>
+                    <a asp-action="RemoveImg1" asp-route-projectId="@item.ProjectId" asp-controller="Admin"
+                    asp-route-id="@item.Id"> remove Img1</a>
+                    <a asp-action="RemoveImg2" asp-controller="Admin" asp-route-projectId="@item.ProjectId"
+                    asp-route-id="@item.Id"> remove Img2</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary m-2" asp-action="EditFeature" asp-route-id="@item.Id">Edit</a>  
+                    <button onclick="deleteFeature(@item.Id,@item.ProjectId)">delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    function deleteFeature(id, projectId) {
+        if (confirm("delete feature?")) {
+            location.href = `/Admin/DeleteFeature/${id}?projectId=${projectId}`
+        }
+    }
+</script>

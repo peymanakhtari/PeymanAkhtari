@@ -1,0 +1,110 @@
+.btnFeatures {
+  left: 8px;
+}
+
+.btn_more_features {
+  left: 8px;
+}
+
+.titles button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card_body:hover button {
+  max-width: 95%;
+  max-height: 3.1rem;
+  font-size: 19.5px;
+  color: rgb(255, 255, 255) !important;
+}
+
+.card_body button {
+  font-size: 16px;
+  max-width: 50%;
+  max-height: 2.4rem;
+  width: 95%;
+  height: 3.1rem;
+  transition: all 0.7s, background-color 0s;
+}
+.card_body img {
+  width: 17rem;
+  padding: 0;
+}
+
+#aboutme-title {
+  font-size: 26px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+#mysampleworks {
+  top: -48px;
+  left: 0;
+  padding: 0.79rem 2.6rem;
+  font-size: 19px;
+}
+#mysampleworks::before {
+  border-top: 3rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-left: 3rem solid #1f1f1f;
+  position: absolute;
+  right: -4rem;
+  top: 0px;
+}
+
+.span1 {
+  width: 8px;
+  transition: top 0.5s 2s;
+  height: 3rem;
+  background-color: white;
+  position: absolute;
+  top: -3rem;
+  left: 0;
+}
+
+.span2 {
+  width: 16rem;
+  height: 3rem;
+  transition: left 0.8s 2.5s, width 0s 3.8s;
+  position: absolute;
+  top: -3rem;
+  left: 8px;
+  background-color: white;
+  padding: 0.7rem 3rem;
+}
+
+.moveSpan1 {
+  top: -6rem;
+}
+
+.moveSpan2 {
+  left: 16rem;
+  width: 0;
+}
+
+.card_container {
+  border-top-left-radius: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #mysampleworks {
+    padding: 0.7rem 2rem;
+    top: -2.6rem;
+    font-size: 17px;
+  }
+  #mysampleworks::before {
+    border-top: 2.65rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-left: 2rem solid #1f1f1f;
+  }
+}
+@media screen and (max-width: 480px) {
+  #mysampleworks {
+    padding: 0.55rem 1.7rem;
+    top: -2.35rem;
+  }
+  #mysampleworks::before {
+    border-top: 2.35rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-left: 2rem solid #1f1f1f;
+  }
+}/*# sourceMappingURL=style_english.css.map */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
+  <script src="test.js"></script>
+</head>
+
+<body>
+  <style>
+    html,
+    body {
+      height: 100%;
+      background: #f6f7fd;
+      font-size: 16px;
+    }
+
+    .heading {
+      margin: 36px 0;
+      padding: 24px 32px;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(0, 32, 128, 0.12);
+      border-radius: 16px;
+      font-size: 18px;
+    }
+
+    .snippet {
+      position: relative;
+      background: #fff;
+      padding: 32px 5%;
+      margin: 24px 0;
+      box-shadow: 0 4px 12px -2px rgba(0, 32, 128, .1), 0 0 0 1px rgba(60, 80, 120, 0.1);
+      border-radius: 16px;
+    }
+
+    .snippet::before {
+      display: inline-block;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      padding: 0 8px;
+      content: attr(data-title);
+      font-size: 12px;
+      font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      color: white;
+      background-color: rgb(255, 25, 100);
+      border-radius: 10px;
+      line-height: 20px;
+    }
+
+    .snippet:hover {
+      cursor: pointer;
+      outline: 2px solid rgb(255, 25, 100);
+    }
+
+    .stage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 32px 0;
+      margin: 0 -5%;
+      overflow: hidden;
+    }
+
+    .filter-contrast {
+      filter: contrast(5);
+      background-color: white;
+    }
+
+    .footer {
+      margin: 120px 0 20px;
+      text-align: center;
+      overflow: auto;
+    }
+
+    .tooltip::after {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-top: 8px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1;
+      color: white;
+      background-color: rgba(97, 97, 97, .9);
+      transform: translateX(-50%);
+      content: attr(aria-label);
+      pointer-events: none;
+    }
+  </style>
+
+<div style="margin-left: 2rem;" class="dot-flashing"></div>
+ 
+</body>
+
+</html>

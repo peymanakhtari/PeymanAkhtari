@@ -1,0 +1,50 @@
+﻿@model IEnumerable<PeymanAkhtari.Models.Feature>
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Project";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="/viewFiles/home/project.css">
+
+<div class="container">
+    <h1 class="projectTitle">@ViewBag.ProjectName</h1>
+    <div class="titles">
+        @foreach (var item in Model)
+        {
+            @if (item.Title != null)
+            {
+                <button onclick="scrollToTitle(@item.Id)">@item.Title</button>
+            }
+        }
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="FeatureContent">
+            @if (item.Title != null)
+            {
+                <h3 id="title_@item.Id">@Html.Raw(item.Title)</h3>
+            }
+            @if (@item.Text1 != null)
+            {
+                <p>@Html.Raw(item.Text1)</p>
+            }
+            @if (item.img1 != null)
+            {
+                    <img class="@item.img1Class" loading="lazy" src="~/images/features/@item.img1" alt="@item.Title">
+            }
+            @if (@item.Text2 != null)
+            {
+                <p>@Html.Raw(item.Text2)</p>
+            }
+            @if (item.img2 != null)
+            {
+                    <img class="@item.Img2Class" loading="lazy" src="~/images/features/@item.img2" alt="@item.Title">
+            }
+        </div>
+
+    }
+    <button class="shadow gototop" onclick="topFunction()" id="goToTop"><span>@Localizer["go to top"]</span> <i class='fas fa-long-arrow-alt-up fa-2x '></i></button>
+</div>
+<script src="/viewFiles//home/project.js"></script>
+<script src="/viewFiles//home/jquery.js"></script>

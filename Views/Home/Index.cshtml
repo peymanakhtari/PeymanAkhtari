@@ -1,0 +1,122 @@
+﻿@model IEnumerable<PeymanAkhtari.Models.Project>
+@using System.Globalization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Home Page";
+    var lang = CultureInfo.CurrentCulture.Name;
+}
+
+<style>
+    #peyman_img {
+        display: block !important;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="/viewFiles/home/index.css">
+    <link rel="stylesheet" href="/viewFiles/home/css.css" />
+    <link rel="stylesheet" href="/viewFiles/home/dotflashing.css">
+</head>
+
+
+<div class="parent_imgBx row" style="position: relative;;">
+
+    <div class="loader">
+        <svg width="300" height="180">
+            <path class="path"
+                d="M10,150 v-130 a10,10 0 0 1 10,-10 h260 a10,10 0 0 1 10,10 v130 a10,10 0 0 1 -10,10 h-260 a10,10 0 0 1 -10,-10"
+                fill="none" stroke="black" stroke-width="1" />
+        </svg>
+        <span><bdi>Loading &nbsp;<div class="dot-flashing d-inline-block ms-3"></div></bdi></span>
+    </div>
+    <div class="col-12 col-lg-8 imgbtn">
+
+        <div id="peyman_img">
+            <div id="parent_img" style="position: relative">
+                <button id="fullstack" class="btn_foolstack  shadow">@Localizer["fullstack"]</button>
+                <img id="img_peyman" class="shadow hide_img_peyman" src="/img/peyman-akhtari.jpg"
+                    alt="peyman akhtari پیمان اختری">
+            </div>
+        </div>
+    </div>
+    <div sty class="skills col-lg-4 d-none d-lg-block ">
+        <div id="skillDiv" class="skillDiv hideSkills shadow ">
+            <ul>
+                <li><span>ASP.NET Core MVC</span></li>
+                <li><span>C#</span></li>
+                <li><span>HTML-CSS</span></li>
+                <li><span>Javascript</span></li>
+                <li><span>Bootstrap</span></li>
+                <li><span>Jquery</span></li>
+                <li><span>Angular</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="langAlertDiv"></div>
+<div class="speech-bubble">
+    <p>click here to change the language</p>
+    <button onclick="UserKnowLang()" class="btn btn-dark text-white ">OK</button>
+</div>
+
+
+<div class="cardParent">
+    <h2 id="mysampleworks">@Localizer["my sample works"] :</h2>
+    <span class="span1"></span>
+    <span class="span2"></span>
+    <div class="card_container">
+        @foreach (var item in Model)
+        {
+            <div class="card_samplework">
+                <h5 class="card_title"> <a href="@item.linkHref"> @item.LinkText</a> </h5>
+                <div class="card_body">
+                    <img src="/images/projects/@item.img" alt="@item.Title">
+                    <button id="p_@item.Id" class="btn btn-darkred btnFeatures shadow" onclick="slide(this.id)">
+                        @Localizer["btnfeatures"]
+                    </button>
+                </div>
+                <div class="detail" id="d_@item.Id">
+                    <div class="feature ">
+                        @Html.Raw(item.Html)
+                        <a href="/Home/Project/@item.Id" class="btn_more_features">
+                            @Localizer["btn more features"]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div id="webservice" class="collapsWebservice">
+    <h2 class="hideTitle">@Localizer["webservices title"]</h2>
+    <br>
+    <p class="hideP">@Html.Raw(ViewBag.Websevice)</p>
+</div>
+
+@Html.Partial("Contactme")
+<div class="socialLinks" id="contactme">
+    <a href="https://www.linkedin.com/in/peyman-akhtari-85333b21a/"><img src="~/img/linkedin.jpg" alt="linkedin"></a>
+    <a href="https://wa.me/+989171898681?text="><img src="~/img/whatsapp.png" alt="whatsapp"></a>
+    <a href="https://www.instagram.com/peyman.akhtari94?r=nametag"><img src="~/img/instagram-icon.png"
+            alt="instagram"></a>
+    <a href="mailto:peyman.firelance@gmail.com"><img src="~/img/Gmail_Icon.jpg" alt="Gmail"></a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<script src="~/viewFiles/home/index.js"></script>
+
+@if (lang == "fa")
+{
+    <script>
+
+        replaceDigits()
+
+    </script>
+}

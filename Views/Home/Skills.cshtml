@@ -1,0 +1,112 @@
+﻿@using System.Globalization
+@inject IViewLocalizer Localizer
+<link rel="stylesheet" href="~/viewFiles/home/skills.css">
+
+@{
+    var lang = CultureInfo.CurrentCulture.Name;
+}
+
+@if (lang == "fa")
+{
+    <style>
+        #containerSkills {
+            direction: rtl;
+        }
+
+        .skill h2 {
+            text-align: right;
+        }
+    </style>
+}
+
+
+
+<div id="containerSkills" class="container">
+    <h1 class="title">@Localizer["skill title"]</h1>
+    @* <p class="skillDes">
+        @Localizer["skill description"]
+        </p> *@
+    <br>
+</div>
+
+<div id="1" class="skill">
+    <h2> @Localizer["languages"]</h2>
+    <p class="p">
+        <b>Object oriented programming (OOP)</b><br>
+        <b>C#</b> <br>
+        <b>JavaScript</b> <br>
+        <b>TypeScript</b> <br>
+        Learning Java <br>
+        Learning C++
+    </p>
+</div>
+
+<div id="2" class="skill">
+    <h2 style="text-align: left "> Mark up language & data transport</h2>
+    <p class="p">
+        <b>HTML + CSS(LESS & SASS)</b> <br>
+        <b>XML</b> <br>
+        <b>Json</b>
+    </p>
+</div>
+
+<div id="3" class="skill">
+    <h2> @Localizer["web frameworks"]</h2>
+    <p class="p">
+        <b>ASP.NET Core MVC</b> <br>
+        <b>ASP.NET Core web api</b> <br>
+        <b>Angular</b> <br>
+        <b>JQuery</b> <br>
+        <b>Bootstrap</b> <br>
+        Learning React js
+
+    </p>
+</div>
+
+<div id="4" class="skill">
+    <h2 style="text-align: left">Third party libraries</h2>
+    <p class="p">
+        <b>Font awesome</b> <br>
+        <b>Slike slider JS</b> <br>
+        <b>Splide js</b> <br>
+        <b>Sweet alert</b> <br>
+        <b>And ....</b> <br>
+   
+    </p>
+</div>
+
+<div id="5" class="skill">
+    <h2 style="text-align: left">DataBase</h2>
+    <p class="p">
+        <b>SQL-Server</b> <br>
+        <b>Entity Framework Core (EFCore)</b> <br>
+        Learning Dapper <br>
+        Learning SQLite <br>
+    </p>
+</div>
+<div id="6" class="skill">
+    <h2> @Localizer["seo"]</h2>
+    <p class="p">
+        <b>Google Search Console</b> <br>
+        <b>Google Analitics</b>
+    </p>
+</div>
+<div id="7" class="skill">
+    <h2 style="text-align: left"> Integrated Development Environment (IDE)</h2>
+    <p class="p">
+        <b>Visual studio</b> <br>
+        <b>Visual studio code</b> <br>
+        Learning Android studio
+    </p>
+</div>
+<div id="8" class="skill">
+    <h2> @Localizer["other softwares"]</h2>
+    <p class="p">
+        <b>Photoshop</b> <br>
+        <b>Microsoft office</b> <br>
+        Learning Illustrator
+    </p>
+</div>
+<br><br><br><br><br><br><br>
+
+<script src="~/viewFiles/home/skills.js"></script>

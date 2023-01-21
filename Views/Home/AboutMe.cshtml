@@ -1,0 +1,33 @@
+﻿@using System.Globalization
+@inject IViewLocalizer Localizer
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link rel="stylesheet" href="/viewFiles/home/css.css" />
+
+<h1 id="aboutme-title">@Localizer["aboutme title"]</h1>
+<div id="aboutmeText">
+
+
+    <p>@Localizer["aboutme text1"]</p>
+
+    <a style="margin: 1rem;display: inline-block;" href="https://radicaltherapy.ir/Home/Contact?peyman=val">
+        @Localizer["sign link"] </a>
+    <div id="signature">
+        <span>Web developer: Peyman Akhtari</span>
+        <span>Peyman.firelance@gmail.com</span>
+    </div>
+
+    <p>@Localizer["aboutme text2"]</p>
+    <div class="socialLinks">
+        <a href="https://www.linkedin.com/in/peyman-akhtari-85333b21a/"><img src="~/img/linkedin.jpg"
+                alt="linkedin"></a>
+        <a href="https://wa.me/+989171898681?text="><img src="~/img/whatsapp.png" alt="whatsapp"></a>
+        <a href="https://www.instagram.com/peyman.akhtari94?r=nametag"><img src="~/img/instagram-icon.png"
+                alt="instagram"></a>
+        <a href="mailto:peyman.firelance@gmail.com"><img src="~/img/Gmail_Icon.jpg" alt="Gmail"></a>
+    </div>
+    <br><br><br><br><br>
+</div>

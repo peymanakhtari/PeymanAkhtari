@@ -1,0 +1,69 @@
+﻿@model PeymanAkhtari.Models.Project
+
+@{
+    ViewData["Title"] = "EditProject";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h1>EditProject</h1>
+
+<h4>Project</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form enctype="multipart/form-data" method="post" asp-action="EditProject">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Html" class="control-label"></label>
+                @* @if (Model != null && Model.Language == 1)
+                {
+                    <textarea dir="rtl" asp-for="Html" class="form-control" rows="10"></textarea>
+                }
+                else
+                {
+                } *@
+                    <textarea asp-for="Html" class="form-control" rows="8"></textarea>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LinkText" class="control-label"></label>
+                <input asp-for="LinkText" class="form-control" />
+                <span asp-validation-for="LinkText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="linkHref" class="control-label"></label>
+                <input asp-for="linkHref" class="form-control" />
+                <span asp-validation-for="linkHref" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="img" class="control-label"></label>
+                <input asp-for="img" type="file" class="form-control" />
+                <span asp-validation-for="img" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sequence" class="control-label"></label>
+                <input asp-for="Sequence" class="form-control" />
+                <span asp-validation-for="Sequence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Language" class="control-label"></label>
+                <input asp-for="Language" class="form-control" />
+                <span asp-validation-for="Language" class="text-danger"></span>
+            </div><br>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

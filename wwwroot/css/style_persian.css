@@ -1,0 +1,216 @@
+html {
+  direction: rtl;
+}
+
+header {
+  direction: ltr;
+}
+
+.form_message {
+  text-align: right;
+  font-family: iranyekan;
+}
+
+.btn_foolstack {
+  font-family: iranyekan;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 14px 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .btn_foolstack {
+    font-size: 15px;
+    padding: 8px 1rem;
+  }
+}
+.navbar-collapse {
+  font-weight: bold;
+  font-family: iranyekan;
+  font-size: 15px;
+}
+
+.btnFeatures {
+  font-family: iraniansans;
+  right: 8px;
+}
+
+.FeatureContent h3 {
+  font-family: iranyekan;
+}
+.FeatureContent p {
+  font-family: bkoodak;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+
+#webservice h2 {
+  font-family: iranyekan;
+  font-weight: 500;
+}
+#webservice p {
+  font-family: bkoodak;
+  font-size: 1.15rem;
+}
+
+#mysampleworks {
+  text-align: right;
+  width: 100%;
+  padding-right: 2rem;
+  font-family: iranyekan;
+  font-weight: bold;
+}
+
+.feature {
+  font-family: IRANSansX-Regular, "Tahoma";
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.card_body button {
+  max-width: 60%;
+  max-height: 2.6rem;
+  width: 95%;
+  height: 3.2rem;
+  transition: all 0.7s, background-color 0s;
+  font-size: 14px;
+}
+
+.regular_link {
+  font-family: IRANSansX-Regular, "Tahoma";
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.regular_link:hover {
+  text-decoration: underline;
+  color: rgb(2, 2, 85);
+}
+
+.projectTitle {
+  font-family: iranyekan;
+}
+
+.titles {
+  font-family: iranyekan;
+}
+
+.projectLink {
+  font-family: iranyekan;
+  font-size: 1rem;
+}
+
+.btn_more_features {
+  right: 8px;
+  font-family: iraniansans;
+}
+
+.message_box .contact_links span {
+  font-family: iraniansans;
+}
+
+.loadingText {
+  font-family: iranyekan;
+}
+
+.gototop {
+  font-family: IRANSansX-Regular;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-collapse {
+    max-width: 23rem;
+  }
+}
+#containerSkills h1 {
+  font-family: iranyekan;
+  font-size: 22px;
+}
+
+.skill {
+  font-family: IRANSansX-Regular;
+}
+
+#aboutme-title {
+  font-family: iranyekan;
+  margin-top: 3rem;
+  font-size: 24px;
+  margin-right: 2rem;
+}
+
+#aboutmeText {
+  font-family: IRANSansX-Regular;
+  padding: 1rem;
+}
+
+#mysampleworks {
+  top: -44px;
+  right: 0;
+  width: auto;
+  font-weight: 100;
+  padding: 0.72rem 1.5rem;
+}
+#mysampleworks::before {
+  border-top: 2.7rem solid transparent;
+  border-left: 1rem solid transparent;
+  border-right: 3rem solid #1f1f1f;
+  position: absolute;
+  left: -4rem;
+  top: 0px;
+}
+
+.card_container {
+  border-top-right-radius: 0;
+}
+
+.span1 {
+  width: 8px;
+  transition: top 0.5s 2s;
+  height: 3rem;
+  background-color: white;
+  position: absolute;
+  top: -3rem;
+  right: 0;
+}
+
+.span2 {
+  width: 18rem;
+  height: 3rem;
+  transition: right 0.8s 2.5s, width 0.5s 2.6s;
+  position: absolute;
+  top: -3rem;
+  right: 8px;
+  background-color: white;
+}
+
+.moveSpan1 {
+  top: -6rem;
+}
+
+.moveSpan2 {
+  right: 20rem;
+  width: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  #mysampleworks {
+    padding: 0.7rem;
+    top: -2.6rem;
+  }
+  #mysampleworks::before {
+    border-top: 2.65rem solid transparent;
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid #1f1f1f;
+  }
+}
+@media screen and (max-width: 480px) {
+  #mysampleworks {
+    padding: 0.65rem;
+    top: -2.55rem;
+  }
+  #mysampleworks::before {
+    border-top: 2.6rem solid transparent;
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid #1f1f1f;
+  }
+}/*# sourceMappingURL=style_persian.css.map */

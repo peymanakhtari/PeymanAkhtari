@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "bkoodak";
+    src: url("../font/BKoodakBold.ttf") format("ttf"), url("../font/BKoodakBold.woff") format("woff"), url("../font/BKoodakBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IranianSans";
+    src: url("../font/Iranian Sans.ttf") format("ttf"), url("../font/Iranian Sans.woff") format("woff"), url("../font/Iranian Sans.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: "shabnam";
+    src: url("../font/Shabnam.ttf") format("ttf"), url("../font/Shabnam.woff") format("woff"), url("../font/Shabnam.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BCompset";
+    src: url("../font/BCompset.ttf") format("ttf"), url("../font/BCompset.woff") format("woff"), url("../font/BCompset.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BElham";
+    src: url("../font/BElham.ttf") format("ttf"),
+        url("../font/BElham.woff") format("woff"),
+        url("../font/BElham.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BFarnaz";
+    src: url("../font/BFarnaz.ttf") format("ttf"),
+        url("../font/BFarnaz.woff") format("woff"),
+        url("../font/BFarnaz.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BHoma";
+    src: url("../font/BHoma.ttf") format("ttf"),
+        url("../font/BHoma.woff") format("woff"),
+        url("../font/BHoma.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BKamran";
+    src: url("../font/BKamran.ttf") format("ttf"),
+        url("../font/BKamran.woff") format("woff"),
+        url("../font/BKamran.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BMitra";
+    src: url("../font/BMitra.ttf") format("ttf"),
+        url("../font/BMitra.woff") format("woff"),
+        url("../font/BMitra.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BNarm";
+    src: url("../font/BNarm.ttf") format("ttf"),
+        url("../font/BNarm.woff") format("woff"),
+        url("../font/BNarm.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BNazanin";
+    src: url("../font/BNazanin.ttf") format("ttf"),
+        url("../font/BNazanin.woff") format("woff"),
+        url("../font/BNazanin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BYekan";
+    src: url("../font/BYekan.ttf") format("ttf"),
+        url("../font/BYekan.woff") format("woff"),
+        url("../font/BYekan.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BRoya";
+    src: url("../font/BRoya.ttf") format("ttf"),
+        url("../font/BRoya.woff") format("woff"),
+        url("../font/BRoya.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BSinaBold";
+    src: url("../font/BSinaBold.ttf") format("ttf"),
+        url("../font/BSinaBold.woff") format("woff"),
+        url("../font/BSinaBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "BTraffic";
+    src: url("../font/BTraffic.ttf") format("ttf"),
+        url("../font/BTraffic.woff") format("woff"),
+        url("../font/BTraffic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Tahoma";
+    src: url("../font/Tahoma Regular.ttf") format("ttf"),
+        url("../font/Tahoma Regular.woff") format("woff"),
+        url("../font/Tahoma Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IRANSansX-Bold";
+    src: url("../font/IRANSansX-Bold.ttf") format("ttf"),
+        url("../font/IRANSansX-Bold.woff") format("woff"),
+        url("../font/IRANSansX-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IRANSansX-Regular";
+    src: url("../font/IRANSansX-Regular.ttf") format("ttf"),
+        url("../font/IRANSansX-Regular.woff") format("woff"),
+        url("../font/IRANSansX-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "iranyekan";
+    src: url("../font/iranyekanwebregularfanum.ttf") format("ttf"),
+        url("../font/iranyekanwebregularfanum.woff") format("woff"),
+        url("../font/iranyekanwebregularfanum.eot") format("eot");
+}
